@@ -69,27 +69,65 @@
     <!-- 左侧菜单 -->
     <div class="layui-side layui-bg-black left-menu-all">
         <div class="layui-side-scroll">
-            <ul class="layui-nav layui-nav-tree"  lay-filter="test">
-                <li class="layui-nav-item layui-nav-itemed">
-                    <a class="" href="javascript:;">产品</a>
-                    <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">移动模块</a></dd>
-                        <dd><a href="javascript:;">后台模版</a></dd>
-                        <dd><a href="javascript:;">电商平台</a></dd>
-                        <dd><a href="">跳转菜单</a></dd>
-                    </dl>
+            <ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu" style="display: block;">
+                <li class="layui-nav-item layui-this">
+                    <a href="javascript:;" data-url="home.html" data-id="1">后台首页</a>
                 </li>
                 <li class="layui-nav-item">
-                    <a href="javascript:;">解决方案</a>
+                    <a href="javascript:;">测试管理<span class="layui-nav-more"></span></a>
                     <dl class="layui-nav-child">
-                        <dd><a href="javascript:;">移动模块</a></dd>
-                        <dd><a href="javascript:;">后台模版</a></dd>
-                        <dd><a href="">电商平台</a></dd>
+                        <dd>
+                            <a href="javascript:;" data-url="lists.html" data-id="2">测试列表</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="login.html" data-id="8">登录页</a>
+                        </dd>
                     </dl>
                 </li>
-                <li class="layui-nav-item"><a href="">云市场</a></li>
-                <li class="layui-nav-item"><a href="">社区</a></li>
-            </ul>
+                <span class="layui-nav-bar" style="top: 22.5px; height: 0px; opacity: 0;"></span></ul>
+            <ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu" style="display: none;">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">后台用户<span class="layui-nav-more"></span></a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="3">登录日志</a>
+                        </dd>
+                        <dd>
+                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="4">操作日志</a>
+                        </dd>
+                    </dl>
+                </li>
+                <span class="layui-nav-bar"></span></ul>
+            <ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu" style="display: none;">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">导航管理<span class="layui-nav-more"></span></a>
+                    <dl class="layui-nav-child">
+                        <dd class="layui-this">
+                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="5">导航列表</a>
+                        </dd>
+                    </dl>
+                </li>
+                <span class="layui-nav-bar" style="top: 22.5px; height: 0px; opacity: 0;"></span></ul>
+            <ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu" style="display: none;">
+                <li class="layui-nav-item">
+                    <a href="javascript:;">广告管理<span class="layui-nav-more"></span></a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="6">广告列表</a>
+                        </dd>
+                    </dl>
+                </li>
+                <span class="layui-nav-bar" style="top: 0px; height: 45px; opacity: 1;"></span></ul>
+            <ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu" style="display: none;">
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="javascript:;">会员管理<span class="layui-nav-more"></span></a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="7">会员列表</a>
+                        </dd>
+                    </dl>
+                </li>
+                <span class="layui-nav-bar" style="top: 0px; height: 45px; opacity: 1;"></span></ul>
         </div>
     </div>
 
