@@ -9,6 +9,11 @@
     <!--layui.js文件引入-->
     <script src="layui/layui.js"></script>
     <script src="js/index.js"></script>
+    <script>
+        layui.use(['element'], function (data) {
+            var element = layui.element();
+        })
+    </script>
 </head>
 <body>
 <div class="layui-layout layui-layout-admin">
@@ -17,7 +22,7 @@
         <div class="layui-main">
             <div class="top-left">
                 <!-- logo -->
-                <a href="/" class="logo">DMP后台管理</a>
+                <a href="#" class="logo">DMP后台管理</a>
             </div>
             <!-- 头部一级菜单 -->
             <ul class="layui-nav top-menu" lay-filter="top-menu">
@@ -26,9 +31,10 @@
                 <li class="layui-nav-item"><a href="javascript:;">内容管理</a></li>
                 <li class="layui-nav-item"><a href="javascript:;">应用管理</a></li>
                 <li class="layui-nav-item"><a href="javascript:;">会员管理</a></li>
-                <span class="layui-nav-bar" style="left: 357.156px; top: 55px; width: 0px; opacity: 0;"></span></ul>
-            <!-- 头部右侧操作 -->
-            <ul class="layui-nav operate" lay-filter="top-manager">
+                <span class="layui-nav-bar" style="left: 357.156px; top: 55px; width: 0px; opacity: 0;"></span>
+            </ul>
+            <!--头部右侧菜单-->
+            <ul class="layui-nav operate">
                 <li class="layui-nav-item">
                     <a href="javascript:;">进入前台</a>
                 </li>
@@ -40,38 +46,9 @@
                         <dd class="layui-this"><a href="">退出登录</a></dd>
                     </dl>
                 </li>
-               <!-- <li class="layui-nav-item">
-                    <a href="javascript:;">131****5931<span class="layui-nav-more"></span></a>
-                    <dl class="layui-nav-child layui-anim layui-anim-upbit">
-                        <dd class="">
-                            <a href="javascript:;">个人信息</a>
-                        </dd>
-                        <dd class="layui-this">
-                            <a href="javascript:;">修改密码</a>
-                        </dd>
-                        <dd class="">
-                            <a href="javascript:;">退出登录</a>
-                        </dd>
-                    </dl>
-                </li>-->
-                <li class="layui-nav-item skin-rade">
-                    <a href="javascript:;">换肤</a>
-                    <dl class="layui-nav-child">
-                        <dd>
-                            <a href="javascript:;" style="background-color: #01AAED"></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" style="background-color: #F7B824"></a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" style="background-color: #FF5722"></a>
-                        </dd>
-                    </dl>
-                </li>
-                <span class="layui-nav-bar" style="left: 174px; top: 55px; width: 0px; opacity: 0;"></span></ul>
+            </ul>
         </div>
     </div>
-
     <!-- 左侧菜单 -->
     <div class="layui-side layui-bg-black left-menu-all">
         <div class="layui-side-scroll">
@@ -142,7 +119,7 @@
         <!-- 顶部切换卡 -->
         <div class="layui-tab layui-tab-card" lay-filter="top-tab" lay-allowclose="true">
             <ul class="layui-tab-title"><li lay-id="1" class="layui-this">后台首页<i class="layui-icon layui-unselect layui-tab-close">ဆ</i></li></ul>
-            <div class="layui-tab-content"><div class="layui-tab-item layui-show"><iframe src="home.html" style="height:411px;"></iframe></div></div>
+            <div class="layui-tab-content"><div class="layui-tab-item layui-show"><iframe src="home.html" style="height:600px;"></iframe></div></div>
         </div>
     </div>
 
