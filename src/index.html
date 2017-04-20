@@ -28,11 +28,19 @@
                 <li class="layui-nav-item"><a href="javascript:;">会员管理</a></li>
                 <span class="layui-nav-bar" style="left: 357.156px; top: 55px; width: 0px; opacity: 0;"></span></ul>
             <!-- 头部右侧操作 -->
-            <ul class="layui-nav operate">
+            <ul class="layui-nav operate" lay-filter="top-manager">
                 <li class="layui-nav-item">
                     <a href="javascript:;">进入前台</a>
                 </li>
                 <li class="layui-nav-item">
+                    <a href="javascript:;">admin</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="">个人信息</a></dd>
+                        <dd><a href="">修改密码</a></dd>
+                        <dd class="layui-this"><a href="">退出登录</a></dd>
+                    </dl>
+                </li>
+               <!-- <li class="layui-nav-item">
                     <a href="javascript:;">131****5931<span class="layui-nav-more"></span></a>
                     <dl class="layui-nav-child layui-anim layui-anim-upbit">
                         <dd class="">
@@ -45,8 +53,7 @@
                             <a href="javascript:;">退出登录</a>
                         </dd>
                     </dl>
-                </li>
-                <!--
+                </li>-->
                 <li class="layui-nav-item skin-rade">
                     <a href="javascript:;">换肤</a>
                     <dl class="layui-nav-child">
@@ -61,7 +68,6 @@
                         </dd>
                     </dl>
                 </li>
-                -->
                 <span class="layui-nav-bar" style="left: 174px; top: 55px; width: 0px; opacity: 0;"></span></ul>
         </div>
     </div>

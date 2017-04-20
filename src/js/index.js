@@ -1,7 +1,6 @@
 /**
  * Created by fengyang on 2017/4/19.
  */
-/*
 layui.use(['element','layer'],function() {
     var $ = layui.jquery;
     var element = layui.element();
@@ -46,17 +45,9 @@ layui.use(['element','layer'],function() {
         $(".layui-body,.layui-footer").css("left",($(".left-menu-all").is(":hidden")) ? '0' : '200px');
     })
 
-    /!*$(".skin-rade .layui-nav-child").on("click","a",function(){
+    /*$(".skin-rade .layui-nav-child").on("click","a",function(){
      var color = $(this).css("background-color");
      $(".layui-layout-admin .layui-header,.layui-bg-black").css("background-color",color);
-     })*!/
-});*/
-layui.use(['element','layer'], function(){
-    var element = layui.element(); //导航的hover效果、二级菜单等功能，需要依赖element模块
-    var layer = layui.layer;
-    //监听导航点击
-    element.on('nav(demo)', function(elem){
-        //console.log(elem)
-        layer.msg(elem.text());
-    });
+     })*/
 });
+
