@@ -2,18 +2,16 @@
  * Created by fengyang on 2017/4/19.
  *webpack配置文件
  */
-
 var path = require("path");
 var extractTextPlugin = require("extract-text-webpack-plugin");//压缩css文件
+
 var webpack = require("webpack");
 module.exports ={
-    //devtool: 'eval-source-map',//配置生成Source Maps，选择合适的选项
     devtool: "source-map",
-    context:path.resolve(__dirname,""),
-   // entry:'./app/index.js',//单个入口文件
     entry:{
         //入口文件（数组或者字符串或者对象）
-        index:'./src/js/index.js'
+       // index:'./src/js/index.js'
+        login:'./src/js/login.js'
     },
     output:{
         filename:'[name].bundle.js',//生成的文件名
@@ -99,23 +97,14 @@ module.exports ={
        ],
         // 如何合理的处理模块的问题
         resolve: {
-            // 设置模块的别名：import xxx from alias
-            alias: {
-                Acss: path.resolve(__dirname, 'src/css/index.css') // import 'Acss';
-            },
-            // 指定要根据本规范解析的字段，default browser
-            aliasFields: ['browser'],
-            // 描述项目的json文件
-            descriptionFiles: ["package.json"],
-            // 是否允许无扩展名的文件, require('./foo), 若为true,不匹配foo.js
-            enforceExtension: false,
-            // 是否需要使用模块的扩展
-            enforceModuleExtension: false,
+           alias:{
+
+           },
             // 自动解决某些扩展程序, 默认就这两个
             extensions: ['.js', '.json'],
         },
         plugins: [
-           new webpack.BannerPlugin('This file is created by fy 2017'),//写在了生成的文件中
+           new webpack.BannerPlugin('This file is created by fy'),//写在了生成的文件中
            new extractTextPlugin({filename: "/css/[name].css", disable: false, allChunks: true}),
            new webpack.optimize.CommonsChunkPlugin({
                 names: ['vendor', 'manifest'] // 指定公共 bundle 的名字。
@@ -123,12 +112,11 @@ module.exports ={
             new webpack.ProvidePlugin({ //别名
                 $: 'jquery',
                 jQuery: 'jquery',
-
             })
         ],
         devServer:{
             contentBase:'./dist',//本地服务器所加载的页面所在的目录
-            port:'63343',
+            port:'8080',
             inline:true,//源文件改变时页面实时刷新 建议测试环境使用
             hot:true,//热部署 建议测试环境使用
             colors:true,//终端中输出结果为彩色
