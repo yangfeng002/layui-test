@@ -1,115 +1,146 @@
+@charset "UTF-8";
 @import "common";
-.layui-main .logo {
-  color: #c2c2c2;
-  font-size: 18px;
-  line-height: 60px
+/*整体样式设计*/
+.layui-layout-admin{
+  /*header样式*/
+  .my-header{
+    .layui-main{
+      .top-left{
+          position: absolute;line-height: 57px;width: 185px;
+        .logo {
+          color: #fff;
+          font-size: 18px;
+          line-height: 60px
+        }
+        .menu-flexible{
+          color: #009688;left: 157px;float: right;
+          .layui-icon{
+            font-size:23px;
+          }
+        }
+
+      }
+      .top-menu {
+        position: absolute;
+        top: 0;
+        left: 200px;
+        font-size: 17px;
+        background: 0
+      }
+      .operate {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: 0
+      }
+    }
+
+  }
+ /*左侧导航样式*/
+  .my-side{
+    .layui-nav[lay-filter=left-menu] {
+      border-radius: 0
+    }
+    .left-menu {
+      display: none;
+      &:first-child {
+        display: block
+      }
+    }
+  }
+  /*content样式*/
+  .my-body{
+    padding: 0 10px;
+    .layui-tab[lay-filter=top-tab] {
+      margin: 0
+    }
+    .layui-tab[lay-filter="top-tab"] .layui-tab-title li:first-child .layui-tab-close{
+      display: none
+    }
+    #frame{
+      width: 100%;
+      height: 100%;
+      border: none;
+      outline: none;
+    }
+    .container{
+      border: 1px solid #e2e2e2;
+      margin-top: 5px;
+      padding: 10px;
+    }
+  }
+  /*footer样式*/
+  .my-footer{
+    text-align: center;
+    line-height: 44px
+  }
 }
 
-.layui-main .top-menu {
-  position: absolute;
-  top: 0;
-  left: 200px;
-  font-size: 17px;
-  background: 0
+/* layui 样式覆盖 */
+html body .layui-nav .layui-nav-bar {
+ /* opacity: 0 !important;
+  overflow: hidden !important;*/
+}
+.layui-nav .layui-this:after, .layui-nav-bar, .layui-nav-tree .layui-nav-itemed:after {
+ /* background-color: transparent;*/
+}
+/* media */
+@media screen and (max-width: 1023px) {
+  .my-header ul.layui-nav, .my-header-btn, .my-side, .layui-field-title, .my-btn-box .fr {
+   /* display: none;*/
+  }
+
+  .layui-side-scroll{
+    width: 170px;
+  }
+
+  body div.my-mobile {
+   /* background: #393D49;*/
+  }
+
+  body div.my-mobile .layui-layer-content {
+    overflow-x: hidden;
+  }
+
+  .my-header ul.my-header-user-nav {
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 10px;
+  }
+
+  .my-header ul.my-header-user-nav a {
+    padding: 0 10px;
+  }
+
+  .my-header ul.my-header-user-nav:last-child a:first-child {
+    padding-right: 20px;
+  }
+
+  .my-side, .layui-nav-tree, .my-btn-box input[type='text'] {
+    width: 150px;
+  }
+
+  .my-body {
+    left: 0;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .my-body iframe {
+    width: 100%;
+  }
+
+  select {
+    background: white;
+  }
+
+  .layui-layout-admin .layui-footer {
+    left: 0;
+  }
 }
 
-.layui-main .operate {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: 0
+@media screen and ( max-width: 450px) {
+  .my-header ul.my-header-user-nav li a.pay {
+    display: none;
+  }
 }
-
-.layui-footer {
-  text-align: center;
-  line-height: 44px
-}
-
-.layui-nav[lay-filter=left-menu] {
-  border-radius: 0
-}
-
-.layui-tab[lay-filter=top-tab] {
-  margin: 0
-}
-
-.left-menu {
-  display: none
-}
-
-.left-menu:first-child {
-  display: block
-}
-
-.layui-tab-content {
-  padding: 0 10px
-}
-
-iframe {
-  width: 100%;
-  border: 0
-}
-
-.content-search,.handle-btn {
-  margin-top: 10px
-}
-
-.layui-table tbody tr.tableTrSelect:hover,.tableTrSelect {
-  background-color: #009688;
-  color: #fff
-}
-
-.layer-form {
-  margin: 10px
-}
-
-.layui-form-item .select-three {
-  width: 145px
-}
-
-.layui-form-item .two-line-input {
-  width: 223px
-}
-
-.layui-form-item .layui-inline,.layui-form-item .select-three:last-child,.layui-form-item .two-line-input:last-child {
-  margin-right: 0
-}
-
-.center {
-  text-align: center
-}
-
-.layui-tab[lay-filter="top-tab"] .layui-tab-title li:first-child .layui-tab-close {
-  display: none
-}
-
-.top-left{
-  position: absolute;line-height: 57px;width: 185px;
-}
-
-.menu-flexible{
-  color: #009688;left: 157px;float: right;
-}
-.menu-flexible .layui-icon{
-  font-size:23px;
-}
-.top-menu *{
-  font-size: 15px;
-}
-
-.skin-rade .layui-nav-child{
-  padding:0;box-shadow: 0px 0px 0px;border:0;background-color: unset;
-}
-.skin-rade  .layui-nav-child a{
-  height:35px;border-radius: 50%;
-}
-
-/** 后台登录样式 */
-.admin-login{width:410px;margin:0 auto;margin-top:150px;}
-.layui-elem-field{border-radius: 20px;background-color: aliceblue;}
-.layui-form{margin:30px 10px 25px}
-.layui-form-item .input-code{width: 160px;}
-.layui-form-item .code{width: 105px;margin-right: 0px;}
-.submit-login{margin-top:30px;}
-.submit-login .layui-btn{margin-left: 284px;}
-.layui-elem-field legend{margin-left: 138px;}
