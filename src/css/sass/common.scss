@@ -452,5 +452,37 @@ body{
   fill: currentColor;
   overflow: hidden;
 }
-
 .icon-diannao:before { content: "\e60f"; }
+
+.icon-diannao1:before { content: "\e688"; }
+.text-danger{
+  color:#FF5722;
+}
+.text-warning{
+  color:#F7B824;
+}
+.text-normal{
+  color:#009688;
+}
+.text-selected{
+  color:#5FB878;
+}
+.text-link{
+  color: #01AAED;
+}
+.text-nav{
+  color:#393D49;
+}
+.text-default{
+  color:#999;
+}
+.text-tip{
+  color:#FF5722;
+}
+.text-current{
+   color:#009688;
+}
+.no-border{
+  border:0;
+}
+

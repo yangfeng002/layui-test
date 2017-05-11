@@ -8,30 +8,126 @@
     <link rel="stylesheet" href="../../css/sass/main.css"/>
 </head>
 <body>
-<div class="container">
+<div class="container migu-monitor-container">
     <!--面包屑-->
-    <fieldset class="layui-elem-field layui-field-title">
-        <legend>
-        <span class="layui-breadcrumb" style="visibility: visible;">
-            <a>监控中心<span class="layui-box">&gt;</span></a>
-            <a><cite>监控系统</cite></a>
-        </span>
-        </legend>
-    </fieldset>
-    <!--<blockquote class="layui-elem-quote">
+    <div class="layui-breadcrumb">
+        <a>监控中心<span class="layui-box">&gt;</span></a>
+        <a><cite>监控系统</cite></a>
+    </div>
+
+
+
+   <!-- <blockquote class="layui-elem-quote">
         <strong>DMP</strong>
         <p>监控信息</p>
     </blockquote>-->
-
-   <ul class="monitor-nav">
-      <li><i class="iconfont icon-diannao"></i></li>
+   <ul class="layui-side monitor-nav" lay-filter="monitorInfo">
+    <!--   <li class="layui-elip current"><a href="#" title="redis服务器：127.0.0.1"><i class="iconfont icon-diannao1 text-danger"></i><span>redis服务器</span>:<span>127.0.0.1</span></a></li>
+       <li class="layui-elip"><a href="#" title="spark服务器测试:127.0.0.1"><i class="iconfont icon-diannao1 text-warning"></i><span>spark服务器测试</span>:<span>127.0.0.1</span></a></li>
+       <li class="layui-elip"><a href="#" title="kafra服务器测试:127.0.0.1"><i class="iconfont icon-diannao1 text-normal"></i><span>kafra服务器测试</span>:<span>127.0.0.1</span></a></li>
+       <li class="layui-elip"><a href="#" title="kafra服务器测试:127.0.0.1"><i class="iconfont icon-diannao1 text-default"></i><span>kafra服务器测试</span>:<span>127.0.0.1</span></a></li>-->
    </ul>
     <div class="monitor-content">
+        <!--计算机信息-->
+       <fieldset class="layui-elem-field layui-field-title">
+           <legend>计算机信息</legend>
+           <ul class="layui-field-box">
+               <li><span>计算机名：</span><code>MIGU-PC</code></li>
+               <li><span>本地主机名：</span><code>MIGU-PC</code></li>
+               <li><span>IP：</span><code>127.0.0.1</code></li>
+               <li><span>操作系统：</span><code>windows</code></li>
+               <li><span> 操作系统描述：</span><code>windows X64</code></li>
+               <li><span> 操作系统版本号：</span><code>7.0</code></li>
+           </ul>
+       </fieldset>
+       <!--资源使用-->
+        <fieldset class="layui-elem-field layui-field-title">
+            <legend>资源使用</legend>
+            <div class="layui-field-box">
+                <div class="layui-inline layui-cpu-block">
+                    <section>
+                        <h4>CPU使用情况</h4>
+                        <div id="cpuContainer" style="height:228px;"></div>
+                        <p>使用占比：<strong>57.21%</strong></p>
+                        <p>主频：<strong>2.25GHZ</strong></p>
+                    </section>
+                </div>
+                <div class="layui-inline layui-storage-block">
+                    <section>
+                        <h4>内存使用情况</h4>
+                        <div id="storageContainer" style="height:228px;"></div>
+                        <p>内存总量：<strong>8.00G</strong></p>
+                        <p>使用量：<strong>500.15MB</strong></p>
+                    </section>
+                </div>
+                <div class="layui-inline layui-exchange-block">
+                    <section>
+                        <h4>交换区</h4>
+                        <div id="exchangeContainer" style="height:228px;"></div>
+                        <p>内存总量：<strong>8.00G</strong></p>
+                        <p>使用量：<strong>500.15MB</strong></p>
+                    </section>
+                </div>
+                <div class="layui-inline layui-exchange-block">
+                    <section>
+                        <h4>磁盘</h4>
+                        <div id="discContainer" style="height:228px;"></div>
+                        <p>内存总量：<strong>720.00G</strong></p>
+                        <p>使用量：<strong>25.15G</strong></p>
+                    </section>
+                </div>
+            </div>
+        </fieldset>
+        <!--jvm信息-->
+        <fieldset class="layui-elem-field layui-field-title">
+            <legend>JVM信息</legend>
+            <ul class="layui-field-box">
+                <li><span>java版本：</span><code>jdk1.8.0</code></li>
+                <li><span>java提供商：</span><code>sun公司</code></li>
+                <li><span>java路径：</span><code>C:\Program Files\Java\jdk1.8.0_121</code></li>
+            </ul>
+            <ul class="layui-field-box layui-jvm-list layui-clear">
+                <li><h4>jvm内存</h4></li>
+                <li><h4>使用量</h4><strong>145M</strong></li>
+                <li><h4>总量</h4><strong>2.0GB</strong></li>
+                <li><h4>使用占比</h4><strong>15.9%</strong></li>
+            </ul>
+            <ul class="layui-field-box layui-jvm-list layui-clear">
+                <li><h4>类信息</h4></li>
+                <li><h4>加载类总数</h4><strong>256个</strong></li>
+                <li><h4>当前加载</h4><strong>17个</strong></li>
+                <li><h4>已卸载</h4><strong>6个</strong></li>
+            </ul>
+            <ul class="layui-field-box layui-jvm-list layui-clear">
+                <li><h4>head堆</h4></li>
+                <li><h4>初始量</h4><strong>145M</strong></li>
+                <li><h4>最大量</h4><strong>2.0GB</strong></li>
+                <li><h4>已使用</h4><strong>265M</strong></li>
+                <li><h4>已申请</h4><strong>280M</strong></li>
+                <li><h4>使用占比</h4><strong>15.9%</strong></li>
+            </ul>
+            <ul class="layui-field-box layui-jvm-list layui-clear">
+                <li><h4>non-head非堆</h4></li>
+                <li><h4>初始量</h4><strong>145M</strong></li>
+                <li><h4>最大量</h4><strong>2.0GB</strong></li>
+                <li><h4>已使用</h4><strong>265M</strong></li>
+                <li><h4>已申请</h4><strong>280M</strong></li>
+                <li><h4>使用占比</h4><strong>15.9%</strong></li>
+            </ul>
+            <ul class="layui-field-box layui-jvm-list layui-clear">
+                <li><h4>线程</h4></li>
+                <li><h4>活动线程数</h4><strong>10</strong></li>
+                <li><h4>峰值数</h4><strong>25</strong></li>
+                <li><h4>线程总数</h4><strong>50</strong></li>
+            </ul>
+        </fieldset>
 
     </div>
 </div>
 <!--layui.js文件引入-->
 <script src="../../layui/layui.js"></script>
-<script src="../../lib/echarts.common.js"></script>
+<script src="../../lib/echarts.min.js"></script>
+<script type="text/javascript" src="../../js/monitor/monitorinfo.js"></script>
+<ul class="layui-fixbar" style="display: none;"><li class="layui-icon layui-fixbar-top" lay-type="top" style="display: list-item;"></li></ul>
 </body>
 </html>

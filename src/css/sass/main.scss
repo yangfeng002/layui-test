@@ -144,3 +144,114 @@ html body .layui-nav .layui-nav-bar {
     display: none;
   }
 }
+
+/*监控部分*/
+.migu-monitor-container{
+
+  .layui-breadcrumb{
+    visibility: visible;
+    background: #fff;
+    position: fixed;
+  }
+  .monitor-nav{
+    background: #fff;
+    width: 200px;
+    top: 55px;
+    li{
+      line-height: 1.5;
+      padding-left: 5px;
+      cursor: pointer;
+      a{
+        i{
+          font-size: 30px;
+          padding:0 5px 0 0;
+        }
+      }
+    }
+    li.current{
+      background: #ddd;
+    }
+  }
+  .monitor-content{
+     margin-left: 220px;
+    top: 45px;
+    position: relative;
+    .layui-elem-field{
+      legend{
+        background: #FED4BC;
+        border-radius: 25px;
+        color: #333;
+        font-size: 14px;
+      }
+      .layui-field-box{
+        padding:10px 20px;
+         li{
+           line-height: 30px;
+         }
+        .layui-inline{
+          width: 23%;
+          text-align: center;
+          h4{
+            margin-bottom: 15px;
+          }
+          div{
+            text-align: left;
+          }
+        }
+      }
+      .layui-jvm-list{
+        background: #eee;
+        margin-bottom: 10px;
+        padding: 0 0 0 10px;
+         li{
+           float:left;
+           padding: 10px;
+           max-width: 150px;
+           strong{
+             color:#66B150;
+           }
+         }
+        li:first-child{
+          min-width: 100px;
+        }
+      }
+    }
+  }
+
+}
+.migu-warning-container{
+   .layui-tab-content{
+     .layui-form[lay-filter="my-editor-form"]{
+       input[readonly]{
+         color:#ccc;
+       }
+     }
+     .layui-btns-group{
+          text-align: right;
+       }
+   }
+}
+/*响应式布局设计*/
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) {
+  .migu-monitor-container .monitor-content .layui-elem-field .layui-jvm-list li {
+      min-width: 60px;
+      max-width: 70px;
+  }
+}
+
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) {
+  .migu-monitor-container .monitor-content .layui-elem-field .layui-jvm-list li {
+    min-width: 90px;
+    max-width: 100px;
+  }
+}
+
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) {
+  .migu-monitor-container .monitor-content .layui-elem-field .layui-jvm-list li {
+     min-width: 110px;
+     max-width: 120px;
+  }
+}

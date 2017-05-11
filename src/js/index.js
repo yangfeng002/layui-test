@@ -17,9 +17,10 @@ layui.use(['element','layer','util'],function() {
         //控制二级菜单的展示（顺序需要保证一致）
         $leftMenu.hide().eq(data.index()).show();
     });
-
+    // 初始化
+    init();
     var mainHeight = $(window).height() - 60 - 41 - 44 - 5;
-    $("#frame").css({height: $(window).height()-155});//设置iframe高度
+    $("#frame").css({height: $(window).height()-180});//设置iframe高度
     //二级菜单事件
     element.on('nav(' + leftMenu + ')',function(data) {
         var a 	= data.children("a");
@@ -122,7 +123,6 @@ layui.use(['element','layer','util'],function() {
         }
         init();
     });
-
     // 监听控制content高度
     function init(){
         // 起始判断收缩还是展开
@@ -138,9 +138,9 @@ layui.use(['element','layer','util'],function() {
         // 需要减去的高度
        var height = $(window).height() - $('.layui-header').height() - cardTitleHeight - $('.layui-footer').height();
         // 设置每一个页面的高度
-       $(document).find(".layui-tab[lay-filter='top-tab'] div.layui-tab-content").height( height - 2);
+
+      $(document).find(".layui-tab[lay-filter='top-tab'] div.layui-tab-content").height( height-25);
     }
-    // 初始化
-    init();
+
 });
 

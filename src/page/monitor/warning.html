@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>告警中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/sass/main.css"/>
+</head>
+<body>
+   <div class="container migu-warning-container">
+       <div class="layui-tab layui-tab-brief sub-page-tab" lay-filter="sub-tab">
+           <ul class="layui-tab-title">
+               <li class="layui-this" data-url="1">告警阀值管理</li>
+               <li data-url="2">告警手机号管理</li>
+           </ul>
+           <div class="layui-tab-content">
+               <div class="layui-tab-item layui-show">
+                   <div class="layui-form" lay-filter="my-editor-form">
+                       <table class="layui-table">
+                           <thead>
+                           <tr>
+                               <th>标识</th>
+                               <th>名称</th>
+                               <th>阈值</th>
+                               <th>操作</th>
+                           </tr>
+                           </thead>
+                           <tbody id="threshold">
+                           <tr>
+                               <td>1</td>
+                               <td>心跳(分钟)</td>
+                               <td><input placeholder="" name="" value="10"  readonly="readonly" class="no-border"/></td>
+                               <td><a>
+                                   <button  class="layui-btn layui-btn-small" lay-submit="" lay-filter="editor"><i class="layui-icon">&#xe642;</i>编辑</button>
+                                   <button class="layui-btn layui-btn-small layui-btn-warm" lay-submit="" lay-filter="save"><i class="layui-icon">&#xe618;</i>保存</button>
+                               </a></td>
+                           </tr>
+                           <tr>
+                               <td>2</td>
+                               <td>jvm使用占比（%）</td>
+                               <td><input placeholder="" name="" value="80" readonly="readonly" class="no-border"></td>
+                               <td><a><button  class="layui-btn layui-btn-small" readonly="readonly" lay-submit="" lay-filter="editor"><i class="layui-icon">&#xe642;</i>编辑</button>
+                                   <button class="layui-btn layui-btn-small layui-btn-warm" lay-submit="" lay-filter="save"><i class="layui-icon">&#xe618;</i>保存</button>
+                               </a></td>
+                           </tr>
+                           <tr>
+                               <td>3</td>
+                               <td>jvm（%）</td>
+                               <td><input placeholder="" name="" value="90" readonly="readonly" class="no-border"></td>
+                               <td><a>
+                                   <button  class="layui-btn layui-btn-small" lay-submit=""  lay-filter="editor"><i class="layui-icon">&#xe642;</i>编辑</button>
+                                   <button class="layui-btn layui-btn-small layui-btn-warm" lay-submit="" lay-filter="save"><i class="layui-icon">&#xe618;</i>保存</button>
+                               </a></td>
+                           </tr>
+                       </table>
+                   </div>
+               </div>
+               <div class="layui-tab-item">
+                   <div class="layui-form">
+                       <table class="layui-table">
+                           <thead>
+                           <tr>
+                               <th>标识</th>
+                               <th>用户名</th>
+                               <th>手机号码</th>
+                               <th>操作</th>
+                           </tr>
+                           </thead>
+                           <tbody id="phone">
+                             <tr>
+                               <td>1</td>
+                               <td><input placeholder="" name="username" value="username"  readonly="readonly" class="no-border"/></td>
+                               <td><input placeholder="" name="phonenum" value="15132156624"  readonly="readonly" class="no-border"/></td>
+                               <td><a>
+                                   <button  class="layui-btn layui-btn-normal layui-btn-small" lay-submit="" lay-filter="editorPhone"><i class="layui-icon">&#xe642;</i>编辑</button>
+                                   <button class="layui-btn layui-btn-danger  layui-btn-small" lay-submit="" lay-filter="deletePhone"><i class="layui-icon">&#xe640;</i>删除</button>
+                               </a></td>
+                           </tr>
+                           </tbody>
+                       </table>
+                       <div class="layui-btns-group">
+                           <button class="layui-btn" lay-submit="" lay-filter="addPhone"><i class="layui-icon ">&#xe654;</i>新增</button>
+                           <button class="layui-btn layui-btn-warm" lay-submit="" lay-filter="savePhone"><i class="layui-icon">&#xe618;</i>保存</button>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       </div>
+
+   </div>
+   <!--layui.js文件引入-->
+   <script src="../../layui/layui.js"></script>
+   <script src="../../js/monitor/warning.js"></script>
+</body>
+</html>
