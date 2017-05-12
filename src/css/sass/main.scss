@@ -222,8 +222,13 @@ html body .layui-nav .layui-nav-bar {
 .migu-warning-container{
    .layui-tab-content{
      .layui-form[lay-filter="my-editor-form"]{
+       input{
+         padding: 10px;
+         border: 0 !important;
+       }
        input[readonly]{
-         color:#ccc;
+         color:#a09d9d;
+         border: 0 !important;
        }
      }
      .layui-btns-group{

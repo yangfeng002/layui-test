@@ -21,13 +21,13 @@
                            <thead>
                            <tr>
                                <th>标识</th>
-                               <th>名称</th>
+                               <th>名称(单位)</th>
                                <th>阈值</th>
                                <th>操作</th>
                            </tr>
                            </thead>
                            <tbody id="threshold">
-                           <tr>
+                        <!--   <tr>
                                <td>1</td>
                                <td>心跳(分钟)</td>
                                <td><input placeholder="" name="" value="10"  readonly="readonly" class="no-border"/></td>
@@ -52,12 +52,12 @@
                                    <button  class="layui-btn layui-btn-small" lay-submit=""  lay-filter="editor"><i class="layui-icon">&#xe642;</i>编辑</button>
                                    <button class="layui-btn layui-btn-small layui-btn-warm" lay-submit="" lay-filter="save"><i class="layui-icon">&#xe618;</i>保存</button>
                                </a></td>
-                           </tr>
+                           </tr>-->
                        </table>
                    </div>
                </div>
                <div class="layui-tab-item">
-                   <div class="layui-form">
+                   <div class="layui-form" lay-filter="my-editor-form">
                        <table class="layui-table">
                            <thead>
                            <tr>
@@ -68,19 +68,19 @@
                            </tr>
                            </thead>
                            <tbody id="phone">
-                             <tr>
+                             <!--<tr>
                                <td>1</td>
                                <td><input placeholder="" name="username" value="username"  readonly="readonly" class="no-border"/></td>
-                               <td><input placeholder="" name="phonenum" value="15132156624"  readonly="readonly" class="no-border"/></td>
+                               <td><input placeholder="" name="phonenum" value="15132156624" lay-verify="required|phone|number"  readonly="readonly" class="no-border"/></td>
                                <td><a>
                                    <button  class="layui-btn layui-btn-normal layui-btn-small" lay-submit="" lay-filter="editorPhone"><i class="layui-icon">&#xe642;</i>编辑</button>
                                    <button class="layui-btn layui-btn-danger  layui-btn-small" lay-submit="" lay-filter="deletePhone"><i class="layui-icon">&#xe640;</i>删除</button>
                                </a></td>
-                           </tr>
+                              </tr>-->
                            </tbody>
                        </table>
                        <div class="layui-btns-group">
-                           <button class="layui-btn" lay-submit="" lay-filter="addPhone"><i class="layui-icon ">&#xe654;</i>新增</button>
+                           <button class="layui-btn"  lay-filter="addPhone"><i class="layui-icon ">&#xe654;</i>新增</button>
                            <button class="layui-btn layui-btn-warm" lay-submit="" lay-filter="savePhone"><i class="layui-icon">&#xe618;</i>保存</button>
                        </div>
                    </div>
