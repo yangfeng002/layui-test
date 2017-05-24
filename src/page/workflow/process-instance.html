@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>运行的流程列表</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/sass/common.css"/>
+    <link rel="stylesheet" href="../../css/sass/main.css"/>
+</head>
+<body>
+    <div class="container migu-workflow-container">
+        <!--面包屑-->
+        <div class="layui-breadcrumb">
+            <a>工作流管理<span class="layui-box">&gt;</span></a>
+            <a><cite>流程实例</cite></a>
+        </div>
+        <!--流程列表展示部分-->
+        <div class="layui-form">
+            <div class="instance-list">
+                <!--搜索功能-->
+                <div class="layui-form-item" >
+                    <div class="migu-input-inline" style="float: right;">
+                        <button class="layui-btn" id="searchDeployList"><i class="layui-icon">&#xe615;</i>搜索</button>
+                    </div>
+                    <div class="layui-input-inline migu-input-inline"  style="float: right;">
+                        <input type="text" lay-verify="keywords" autocomplete="off" placeholder="请输入搜索关键字" name="keywords" class="layui-input"/>
+                    </div>
+                </div>
+                <!--结果展示-->
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="50">
+                        <col width="50">
+                        <col width="50">
+                        <col width="50">
+                        <col width="50">
+                        <col width="50">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>key</th>
+                        <th>流程定义</th>
+                        <th>创建时间</th>
+                        <th>结束时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="instances">
+
+                    </tbody>
+                </table>
+                <!--分页展示-->
+                <div id="instancePage" class="layui-pagination"></div>
+            </div>
+           <div class="instance-detail-list" style="display: none;">
+               <!--搜索功能和返回列表-->
+               <div class="layui-form-item" >
+                   <div class="migu-input-inline" style="float: left;margin-top: 10px;">
+                       <a  class="text-blue return-list"><i class="layui-icon">&#xe603;</i>返回列表</a>
+                   </div>
+                   <div class="migu-input-inline" style="float: right;">
+                       <button class="layui-btn" id="searchDeployDetail"><i class="layui-icon">&#xe615;</i>搜索</button>
+                   </div>
+                   <div class="layui-input-inline migu-input-inline"  style="float: right;">
+                       <input type="text" lay-verify="keywords" autocomplete="off" placeholder="请输入搜索关键字" name="keywords" class="layui-input"/>
+                   </div>
+               </div>
+               <!--tab切换功能-->
+               <div class="layui-tab" lay-filter="sub-tab">
+                   <!--tab标题-->
+                   <ul class="layui-tab-title  migu-tab">
+                       <li class="layui-this" data-url="1">任务</li>
+                       <li data-url="2">工作</li>
+                   </ul>
+                   <!--tab内容部分-->
+                   <div class="layui-tab-content">
+                       <!--任务列表-->
+                       <div class="layui-tab-item layui-show">
+                           <!--表格部分-->
+                           <table class="layui-table">
+                               <colgroup>
+                                   <col width="50">
+                                   <col width="50">
+                                   <col width="50">
+                                   <col width="50">
+                               </colgroup>
+                               <thead>
+                               <tr>
+                                   <th>ID</th>
+                                   <th>名称</th>
+                                   <th>创建时间</th>
+                                   <th>结束时间</th>
+                               </tr>
+                               </thead>
+                               <tbody id="instanceTaskDetails">
+
+                               </tbody>
+                           </table>
+                           <!--分页-->
+                           <div id="instanceTaskPage" class="layui-pagination"></div>
+                       </div>
+                       <!--工作列表-->
+                       <div class="layui-tab-item">
+                           <!--表格部分-->
+                           <table class="layui-table">
+                               <colgroup>
+                                   <col width="50">
+                                   <col width="50">
+                                   <col width="50">
+                                   <col width="50">
+                               </colgroup>
+                               <thead>
+                               <tr>
+                                   <th>ID</th>
+                                   <th>名称</th>
+                                   <th>开始时间</th>
+                                   <th>创建时间</th>
+                               </tr>
+                               </thead>
+                               <tbody id="instanceJobDetails">
+
+                               </tbody>
+                           </table>
+                           <!--分页-->
+                           <div id="instanceJobPage" class="layui-pagination"></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <!--layui.js文件引入-->
+    <script src="../../layui/layui.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/workflow/process-instance.js"></script>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import "common";
+/*@import "common";*/
 /*整体样式设计*/
 .layui-layout-admin{
   /*header样式*/
@@ -236,6 +236,48 @@ html body .layui-nav .layui-nav-bar {
        }
    }
 }
+
+/*工作流部分样式*/
+.migu-workflow-container{
+   .layui-form{
+     .deploy-detail-list,.define-detail-list,.instance-list{
+       margin: 10px 0 0 0;
+       a{
+         cursor: pointer;
+       }
+     }
+     .deploy-list{
+        .migu-input-inline{
+          margin-top: 10px;
+        }
+     }
+     .define-list{
+     }
+     .define-detail-list,.instance-detail-list{
+       margin: 10px 0 0 0;
+       a{
+         cursor: pointer;
+       }
+     }
+   }
+    a.show-detail{
+       cursor: pointer;
+    }
+    .layui-breadcrumb{
+      visibility: visible;
+      background: #fff;
+    }
+     /*分页样式调整*/
+    .layui-laypage a, .layui-laypage span{
+       padding: 3px 15px;
+      font-size: 14px;
+    }
+    .layui-laypage button, .layui-laypage input {
+      height: 32px;
+      line-height: 32px;
+    }
+  }
+
 /*响应式布局设计*/
 /* 小屏幕（平板，大于等于 768px） */
 @media (min-width: 768px) {
@@ -244,7 +286,6 @@ html body .layui-nav .layui-nav-bar {
       max-width: 70px;
   }
 }
-
 /* 中等屏幕（桌面显示器，大于等于 992px） */
 @media (min-width: 992px) {
   .migu-monitor-container .monitor-content .layui-elem-field .layui-jvm-list li {

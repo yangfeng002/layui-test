@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>已完成的流程列表</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/sass/common.css"/>
+    <link rel="stylesheet" href="../../css/sass/main.css"/>
+</head>
+<body>
+    <div class="container migu-workflow-container">
+        <!--面包屑-->
+        <div class="layui-breadcrumb">
+            <a>工作流管理<span class="layui-box">&gt;</span></a>
+            <a>流程实例<span class="layui-box">&gt;</span></a>
+            <a><cite>已结束的流程</cite></a>
+        </div>
+        <!--流程列表展示部分-->
+        <div class="layui-form">
+            <table class="layui-table">
+                <colgroup>
+                    <col width="50">
+                    <col width="50">
+                    <col width="100">
+                    <col width="100">
+                    <col width="50">
+                    <col width="50">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th>流程ID</th>
+                    <th>流程定义ID</th>
+                    <th>启动时间</th>
+                    <th>结束时间</th>
+                    <th>结束原因</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="finishedProcessList">
+
+                </tbody>
+            </table>
+            <div id="finishedProcessPage" class="layui-pagination"></div>
+        </div>
+    </div>
+    <!--layui.js文件引入-->
+    <script src="../../layui/layui.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/workflow/finished-process-list.js"></script>
+
+</body>
+</html>

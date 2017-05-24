@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>任务列表</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/sass/common.css"/>
+    <link rel="stylesheet" href="../../css/sass/main.css"/>
+</head>
+<body>
+    <div class="container migu-workflow-container">
+        <!--面包屑-->
+        <div class="layui-breadcrumb">
+            <a>工作流管理<span class="layui-box">&gt;</span></a>
+            <a>流程实例<span class="layui-box">&gt;</span></a>
+            <a><cite>任务列表</cite></a>
+        </div>
+        <!--流程列表展示部分-->
+        <div class="layui-form">
+            <table class="layui-table">
+              <!--  <colgroup>
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                    <col width="50">
+                </colgroup>-->
+                <thead>
+                <tr>
+                    <th>任务ID</th>
+                    <th>任务Key</th>
+                    <th>任务名称</th>
+                    <th>流程定义ID</th>
+                    <th>流程实例ID</th>
+                    <th>优先级</th>
+                    <th>任务创建日期</th>
+                    <th>任务逾期日</th>
+                    <th>任务描述</th>
+                    <th>任务所属人</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="processTaskList">
+
+                </tbody>
+            </table>
+            <div id="processTaskPage" class="layui-pagination"></div>
+        </div>
+    </div>
+    <!--layui.js文件引入-->
+    <script src="../../layui/layui.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/workflow/process-task-list.js"></script>
+
+</body>
+</html>

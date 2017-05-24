@@ -6,7 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>首页</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png"/>
+    <link rel="shortcut" type="image/x-icon" href="images/favicon.png"/>
     <link rel="stylesheet" href="layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="css/sass/common.css" media="all"/>
     <link rel="stylesheet" href="css/sass/main.css" media="all"/>
     <!--layui.js文件引入-->
     <script src="layui/layui.js"></script>
@@ -63,40 +66,24 @@
             </ul>
             <!--工作流管理 2-->
             <ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu" style="display: none;">
+                <!--可以上传图片bpmn、zip包、jar包、xml文件等-->
                 <li class="layui-nav-item">
-                    <a href="javascript:;">综合流程<span class="layui-nav-more"></span></a>
-                    <dl class="layui-nav-child">
-                        <dd>
-                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="21">流程列表</a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="22">任务列表</a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="23">运行中的流程</a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="24">已结束的流程</a>
-                        </dd>
-                    </dl>
+                    <a href="javascript:;" data-url="page/workflow/process-deploy.html" data-id="21">流程部署</a>
                 </li>
+                <!--可以查看流程图，是整个流程的画图-->
                 <li class="layui-nav-item">
-                    <a href="javascript:;">流程管理<span class="layui-nav-more"></span></a>
-                    <dl class="layui-nav-child">
-                        <dd >
-                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="25">流程定义及部署管理</a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="26">运行中的流程</a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="27">模型工作区</a>
-                        </dd>
-                        <dd>
-                            <a href="javascript:;" data-url="https://www.layui.com/doc/" data-id="28">作业管理</a>
-                        </dd>
-                    </dl>
+                  <a href="javascript:;" data-url="page/workflow/process-define.html" data-id="22">流程定义</a>
+                 </li>
+                <!--流程实例 可以查看运行中的流程、流程节点-->
+                <li class="layui-nav-item">
+                    <a href="javascript:;" data-url="page/workflow/process-instance.html" data-id="23">流程实例</a>
                 </li>
+                  <li class="layui-nav-item">
+                      <a href="javascript:;" data-url="page/workflow/finished-process-list.html" data-id="24">结束的流程</a>
+                  </li>
+                  <li class="layui-nav-item">
+                    <a href="javascript:;" data-url="page/workflow/model-list.html" data-id="25">模型工作区</a>
+                  </li>
             </ul>
             <!--redius管理台 3-->
             <ul class="layui-nav layui-nav-tree left-menu" lay-filter="left-menu" style="display: none;">

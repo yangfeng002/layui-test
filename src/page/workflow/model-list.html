@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>模型工作区</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/sass/common.css"/>
+    <link rel="stylesheet" href="../../css/sass/main.css"/>
+</head>
+<body>
+    <div class="container migu-workflow-container">
+        <!--面包屑-->
+        <div class="layui-breadcrumb">
+            <a>工作流管理<span class="layui-box">&gt;</span></a>
+            <a>流程管理<span class="layui-box">&gt;</span></a>
+            <a><cite>模型工作区</cite></a>
+        </div>
+        <!--流程列表展示部分-->
+        <div class="layui-form">
+            <table class="layui-table">
+               <!-- <colgroup>
+                    <col width="50">
+                    <col width="50">
+                    <col width="100">
+                    <col width="20">
+                    <col width="100">
+                    <col width="100">
+                    <col width="50">
+                    <col width="200">
+                </colgroup>-->
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>KEY</th>
+                    <th>Name</th>
+                    <th>Version</th>
+                    <th>创建时间</th>
+                    <th>最后更新时间</th>
+                    <th>元数据</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="modelList">
+                <tbody>
+
+                </tbody>
+                </tbody>
+            </table>
+            <div id="modelListPage" class="layui-pagination"></div>
+        </div>
+    </div>
+    <!--layui.js文件引入-->
+    <script src="../../layui/layui.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/workflow/model-list.js"></script>
+
+</body>
+</html>

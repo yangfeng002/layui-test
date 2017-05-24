@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>运行的流程管理列表</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../../css/sass/common.css"/>
+    <link rel="stylesheet" href="../../css/sass/main.css"/>
+</head>
+<body>
+    <div class="container migu-workflow-container">
+        <!--面包屑-->
+        <div class="layui-breadcrumb">
+            <a>工作流管理<span class="layui-box">&gt;</span></a>
+            <a><cite>流程部署</cite></a>
+        </div>
+        <!--流程列表展示部分-->
+        <div class="layui-form">
+            <!--部署列表-->
+            <div class="deploy-list">
+                <!--上传和搜索功能-->
+                <div class="layui-form-item" >
+                    <div class="layui-input-inline migu-input-inline">
+                        <div class="layui-box layui-upload-button"><form target="layui-upload-iframe" method="post" key="set-mine" enctype="multipart/form-data" action=""><input type="file" name="file1" lay-type="file" class="layui-upload-file"></form><span class="layui-upload-icon"><i class="layui-icon"></i>上传文件</span></div>
+                    </div>
+                    <div class="migu-input-inline" style="float: right;">
+                        <button class="layui-btn" id="searchDeployList"><i class="layui-icon">&#xe615;</i>搜索</button>
+                    </div>
+                    <div class="layui-input-inline migu-input-inline"  style="float: right;">
+                        <input type="text" lay-verify="keywords" autocomplete="off" placeholder="请输入搜索关键字" name="keywords" class="layui-input"/>
+                    </div>
+                </div>
+                <!--表格结果展示-->
+                <table class="layui-table">
+                    <colgroup>
+                        <col width="50">
+                        <col width="50">
+                        <col width="50">
+                        <col width="50">
+                        <col width="50">
+                        <col width="50">
+                    </colgroup>
+                    <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>名称</th>
+                        <th>部署时间</th>
+                        <th>级别</th>
+                        <th>使用者</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="deployments">
+
+                    </tbody>
+                </table>
+                <!--分页-->
+                <div id="deployPage" class="layui-pagination"></div>
+            </div>
+            <!--部署流程下详细流程定义-->
+           <div class="deploy-detail-list" style="display: none;">
+               <!--搜索功能和返回列表-->
+               <div class="layui-form-item" >
+                   <div class="migu-input-inline" style="float: left;">
+                       <button  class="layui-btn return-list"><i class="layui-icon">&#xe603;</i>返回列表</button>
+                   </div>
+                   <div class="migu-input-inline" style="float: right;">
+                       <button class="layui-btn" id="searchDeployDetail"><i class="layui-icon">&#xe615;</i>搜索</button>
+                   </div>
+                   <div class="layui-input-inline migu-input-inline"  style="float: right;">
+                       <input type="text" lay-verify="keywords" autocomplete="off" placeholder="请输入搜索关键字" name="keywords" class="layui-input"/>
+                   </div>
+               </div>
+               <!--结果列表-->
+               <table class="layui-table">
+                   <colgroup>
+                       <col width="50">
+                       <col width="50">
+                       <col width="50">
+                       <col width="50">
+                   </colgroup>
+                   <thead>
+                   <tr>
+                       <th>ID</th>
+                       <th>名称</th>
+                       <th>版本</th>
+                       <th>key</th>
+                   </tr>
+                   </thead>
+                   <tbody id="deployDetails">
+
+                   </tbody>
+               </table>
+               <!--分页-->
+               <div id="deployDetailPage" class="layui-pagination"></div>
+           </div>
+        </div>
+    </div>
+    <!--layui.js文件引入-->
+    <script src="../../layui/layui.js"></script>
+    <script src="../../js/common.js"></script>
+    <script src="../../js/workflow/process-deploy.js"></script>
+
+</body>
+</html>
