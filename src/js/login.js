@@ -7,6 +7,10 @@ layui.use(['layer','form'], function() {
     var form = layui.form();
     var $ = layui.jquery;
     $(function () {
+        //登录页面距离顶部的高度
+        var height = window.innerHeight;//浏览器的可用高度
+        $(".login-box").css("top",(height)/4);
+
         //忘记密码点击事件
         $("#forgot-password").on("click", function () {
             $("#login-form").slideUp();

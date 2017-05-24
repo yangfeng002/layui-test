@@ -1,6 +1,10 @@
 @charset "UTF-8";
 @import "common";
 /*登录界面样式设置*/
+body{
+  background: url("../../images/login/login-bg.jpg");
+ /* background-size:cover;*/
+}
 .main{
   color: #4b4a4a;
   height: 100%;
@@ -8,11 +12,39 @@
   z-index: 2;
   position: relative;
   .login-box{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    width: 442px;
+    padding: 35px 15px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+   /* width: 442px;*/
+    width: 345px;
     position: relative;
     margin: 0 auto;
-    top:120px;
-    background: #E9F1F5;
+    top:200px;
+   /* background: #E9F1F5;*/
+    background-color:#fff;
+    .layui-form-item{
+      margin-bottom: 20px;
+      .layui-form-label {
+        float: left;
+        display: block;
+        padding: 9px 15px 9px 0;
+        width: auto;
+        font-weight: 400;
+        text-align: left;
+        .iconfont{
+          font-size: 25px;
+        }
+      }
+      .layui-input-inline{
+        float: left;
+        width: 290px;
+        margin-right: 10px;
+        #getPhoneNum{
+           position: absolute;
+           top:0;
+           right:0;
+        }
+      }
+    }
+
   }
 }
