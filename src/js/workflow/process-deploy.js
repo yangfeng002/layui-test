@@ -1,8 +1,8 @@
 /**
  * Created by fengyang on 2017/5/19.
  */
-layui.use(['form','element','layer','laypage','upload'], function () {
-    var element = layui.element(), layer = layui.layer,$ = layui.jquery,laypage = layui.laypage;
+layui.use(['element','layer','laypage','upload','form'], function () {
+    var element = layui.element(), layer = layui.layer,$ = layui.jquery,laypage = layui.laypage,form = layui.form();
     //上传文件操作
     layui.upload({
         url: '',

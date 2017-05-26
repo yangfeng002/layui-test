@@ -1,297 +1,255 @@
 @charset "UTF-8";
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
-
 /* Document
    ========================================================================== */
-
 /**
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-
 html {
-  line-height: 1.15; /* 1 */
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
-}
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
 
 /* Sections
    ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
  */
-
 article,
 aside,
 footer,
 header,
 nav,
 section {
-  display: block;
-}
+  display: block; }
 
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
  */
-
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
-}
+  margin: 0.67em 0; }
 
 /* Grouping content
    ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
  * 1. Add the correct display in IE.
  */
-
 figcaption,
 figure,
-main { /* 1 */
-  display: block;
-}
+main {
+  /* 1 */
+  display: block; }
 
 /**
  * Add the correct margin in IE 8.
  */
-
 figure {
-  margin: 1em 40px;
-}
+  margin: 1em 40px; }
 
 /**
  * 1. Add the correct box sizing in Firefox.
  * 2. Show the overflow in Edge and IE.
  */
-
 hr {
-  box-sizing: content-box; /* 1 */
-  height: 0; /* 1 */
-  overflow: visible; /* 2 */
-}
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-
 pre {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
 /* Text-level semantics
    ========================================================================== */
-
 /**
  * 1. Remove the gray background on active links in IE 10.
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
-
 a {
-  background-color: transparent; /* 1 */
-  -webkit-text-decoration-skip: objects; /* 2 */
-}
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
 
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
-
 abbr[title] {
-  border-bottom: none; /* 1 */
-  text-decoration: underline; /* 2 */
-  text-decoration: underline dotted; /* 2 */
-}
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
 
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
-
 b,
 strong {
-  font-weight: inherit;
-}
+  font-weight: inherit; }
 
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
-
 b,
 strong {
-  font-weight: bolder;
-}
+  font-weight: bolder; }
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
  */
-
 code,
 kbd,
 samp {
-  font-family: monospace, monospace; /* 1 */
-  font-size: 1em; /* 2 */
-}
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
 /**
  * Add the correct font style in Android 4.3-.
  */
-
 dfn {
-  font-style: italic;
-}
+  font-style: italic; }
 
 /**
  * Add the correct background and color in IE 9-.
  */
-
 mark {
   background-color: #ff0;
-  color: #000;
-}
+  color: #000; }
 
 /**
  * Add the correct font size in all browsers.
  */
-
 small {
-  font-size: 80%;
-}
+  font-size: 80%; }
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
  * all browsers.
  */
-
 sub,
 sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
-  vertical-align: baseline;
-}
+  vertical-align: baseline; }
 
 sub {
-  bottom: -0.25em;
-}
+  bottom: -0.25em; }
 
 sup {
-  top: -0.5em;
-}
+  top: -0.5em; }
 
 /* Embedded content
    ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
  */
-
 audio,
 video {
-  display: inline-block;
-}
+  display: inline-block; }
 
 /**
  * Add the correct display in iOS 4-7.
  */
-
 audio:not([controls]) {
   display: none;
-  height: 0;
-}
+  height: 0; }
 
 /**
  * Remove the border on images inside links in IE 10-.
  */
-
 img {
-  border-style: none;
-}
+  border-style: none; }
 
 /**
  * Hide the overflow in IE.
  */
-
 svg:not(:root) {
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 /* Forms
    ========================================================================== */
-
 /**
  * Remove the margin in Firefox and Safari.
  */
-
 button,
 input,
 optgroup,
 select,
 textarea {
-  margin: 0;
-}
+  margin: 0; }
 
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
  */
-
 button,
-input { /* 1 */
-  overflow: visible;
-}
+input {
+  /* 1 */
+  overflow: visible; }
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
  */
-
 button,
-select { /* 1 */
-  text-transform: none;
-}
+select {
+  /* 1 */
+  text-transform: none; }
 
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
  *    controls in Android 4.
  * 2. Correct the inability to style clickable types in iOS and Safari.
  */
-
 button,
-html [type="button"], /* 1 */
+html [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; /* 2 */
-}
+  -webkit-appearance: button;
+  /* 2 */ }
 
 /**
  * Remove the inner border and padding in Firefox.
  */
-
 button::-moz-focus-inner,
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner {
   border-style: none;
-  padding: 0;
-}
+  padding: 0; }
 
 /**
  * Restore the focus styles unset by the previous rule.
  */
-
 button:-moz-focusring,
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring {
-  outline: 1px dotted ButtonText;
-}
+  outline: 1px dotted ButtonText; }
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -299,214 +257,253 @@ button:-moz-focusring,
  * 3. Remove the padding so developers are not caught out when they zero out
  *    `fieldset` elements in all browsers.
  */
-
 legend {
-  box-sizing: border-box; /* 1 */
-  color: inherit; /* 2 */
-  display: table; /* 1 */
-  max-width: 100%; /* 1 */
-  padding: 0; /* 3 */
-  white-space: normal; /* 1 */
-}
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
 
 /**
  * 1. Add the correct display in IE 9-.
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
-
 progress {
-  display: inline-block; /* 1 */
-  vertical-align: baseline; /* 2 */
-}
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
 
 /**
  * Remove the default vertical scrollbar in IE.
  */
-
 textarea {
-  overflow: auto;
-}
+  overflow: auto; }
 
 /**
  * 1. Add the correct box sizing in IE 10-.
  * 2. Remove the padding in IE 10-.
  */
-
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box; /* 1 */
-  padding: 0; /* 2 */
-}
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
 
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
-  height: auto;
-}
+  height: auto; }
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-
 [type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
 
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
-
 [type="search"]::-webkit-search-cancel-button,
 [type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
+  -webkit-appearance: none; }
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
  * 2. Change font properties to `inherit` in Safari.
  */
-
 ::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
 
 /* Interactive
    ========================================================================== */
-
 /*
  * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
  */
-
-details, /* 1 */
+details,
 menu {
-  display: block;
-}
+  display: block; }
 
 /*
  * Add the correct display in all browsers.
  */
-
 summary {
-  display: list-item;
-}
+  display: list-item; }
 
 /* Scripting
    ========================================================================== */
-
 /**
  * Add the correct display in IE 9-.
  */
-
 canvas {
-  display: inline-block;
-}
+  display: inline-block; }
 
 /**
  * Add the correct display in IE.
  */
-
 template {
-  display: none;
-}
+  display: none; }
 
 /* Hidden
    ========================================================================== */
-
 /**
  * Add the correct display in IE 10-.
  */
-
 [hidden] {
-  display: none;
-}
-body{
+  display: none; }
+
+body {
   font-family: '微软雅黑';
   margin: 0 auto;
-  min-width: 980px;
-}
+  min-width: 980px; }
 
 /*字体图标库样式*/
-@font-face {font-family: "iconfont";
-  src: url('../fonts/iconfont.eot?t=1493975905493'); /* IE9*/
-  src: url('../fonts/iconfont.eot?t=1493975905493#iefix') format('embedded-opentype'), /* IE6-IE8 */
-  url('../fonts/iconfont.woff?t=1493975905493') format('woff'), /* chrome, firefox */
-  url('../fonts/iconfont.ttf?t=1493975905493') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
-  url('../fonts/iconfont.svg?t=1493975905493#iconfont') format('svg'); /* iOS 4.1- */
-}
+@font-face {
+  font-family: "iconfont";
+  src: url("../fonts/iconfont.eot?t=1493975905493");
+  /* IE9*/
+  src: url("../fonts/iconfont.eot?t=1493975905493#iefix") format("embedded-opentype"), url("../fonts/iconfont.woff?t=1493975905493") format("woff"), url("../fonts/iconfont.ttf?t=1493975905493") format("truetype"), url("../fonts/iconfont.svg?t=1493975905493#iconfont") format("svg");
+  /* iOS 4.1- */ }
 .iconfont {
-  font-family:"iconfont" !important;
-  font-size:16px;
-  font-style:normal;
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 1em; height: 1em;
+  width: 1em;
+  height: 1em;
   vertical-align: -0.15em;
   fill: currentColor;
-  overflow: hidden;
-}
-.icon-yanzhengma:before { content: "\e600"; }
+  overflow: hidden; }
 
-.icon-diannao:before { content: "\e60f"; }
+.icon-yanzhengma:before {
+  content: "\e600"; }
 
-.icon-youxiang:before { content: "\e636"; }
+.icon-diannao:before {
+  content: "\e60f"; }
 
-.icon-mima:before { content: "\e61e"; }
+.icon-youxiang:before {
+  content: "\e636"; }
 
-.icon-icon32218:before { content: "\e618"; }
+.icon-mima:before {
+  content: "\e61e"; }
 
-.icon-tuichu:before { content: "\e648"; }
+.icon-icon32218:before {
+  content: "\e618"; }
 
-.icon-verify:before { content: "\e617"; }
+.icon-tuichu:before {
+  content: "\e648"; }
 
-.icon-diannao1:before { content: "\e688"; }
+.icon-verify:before {
+  content: "\e617"; }
 
-.icon-yonghuming:before { content: "\e647"; }
+.icon-diannao1:before {
+  content: "\e688"; }
 
-.icon-mimaqueren:before { content: "\e622"; }
+.icon-yonghuming:before {
+  content: "\e647"; }
 
-.icon-xiugai:before { content: "\e6db"; }
+.icon-mimaqueren:before {
+  content: "\e622"; }
 
+.icon-xiugai:before {
+  content: "\e6db"; }
 
 /*字体图标库结束*/
+.text-danger {
+  color: #FF5722; }
 
-.text-danger{
-  color:#FF5722;
-}
-.text-warning{
-  color:#F7B824;
-}
-.text-normal{
-  color:#009688;
-}
-.text-selected{
-  color:#5FB878;
-}
-.text-link{
-  color: #01AAED;
-}
-.text-blue{
-  color:#0000F0;
-}
-.text-nav{
-  color:#393D49;
-}
-.text-default{
-  color:#999;
-}
-.text-tip{
-  color:#FF5722;
-}
-.text-current{
-   color:#009688;
-}
-.no-border{
-  border:0;
-}
+.text-warning {
+  color: #F7B824; }
 
+.text-normal {
+  color: #009688; }
+
+.text-selected {
+  color: #5FB878; }
+
+.text-link {
+  color: #01AAED; }
+
+.text-blue {
+  color: #0000F0; }
+
+.text-nav {
+  color: #393D49; }
+
+.text-default {
+  color: #999; }
+
+.text-tip {
+  color: #FF5722; }
+
+.text-current {
+  color: #009688; }
+
+.no-border {
+  border: 0; }
+
+/*登录界面样式设置*/
+body {
+  background: url("../../images/login/login-bg.jpg");
+  /* display: flex;*/
+  /* align-items: center; !*定义body的元素垂直居中*!
+   justify-content: center; !*定义body的里的元素水平居中*!*/
+  /* background-size:cover;*/ }
+
+.main {
+  color: #4b4a4a;
+  height: 100%;
+  min-height: 400px;
+  z-index: 2;
+  position: relative; }
+  .main .login-box {
+    padding: 30px 15px 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+    /* width: 442px;*/
+    width: 360px;
+    position: relative;
+    margin: 0 auto;
+    top: 200px;
+    left:0;
+    background-color: #fff;
+  }
+    .main .login-box .layui-form-item {
+      margin-bottom: 20px; }
+      .main .login-box .layui-form-item .layui-form-label {
+        float: left;
+        display: block;
+        padding: 9px 15px 9px 0;
+        width: auto;
+        font-weight: 400;
+        text-align: left; }
+        .main .login-box .layui-form-item .layui-form-label .iconfont {
+          font-size: 25px; }
+      .main .login-box .layui-form-item .layui-input-inline {
+        float: left;
+        width: 290px;
+        margin-right: 10px; }
+        .main .login-box .layui-form-item .layui-input-inline #getPhoneNum {
+          position: absolute;
+          top: 0;
+          right: 0; }
+
+/*# sourceMappingURL=login.css.map */

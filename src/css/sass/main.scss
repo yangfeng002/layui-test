@@ -27,11 +27,14 @@
         font-size: 17px;
         background: 0
       }
-      .operate {
+      #layui-accout{
         position: absolute;
         top: 0;
         right: 0;
-        background: 0
+        background: 0;
+        .layui-nav-child dd.layui-this{
+            //选中状态
+        }
       }
     }
 
@@ -73,6 +76,13 @@
   .my-footer{
     text-align: center;
     line-height: 44px
+  }
+}
+/*弹出框部分样式*/
+body #modifyPassword{
+ /* width: 400px;*/
+  .layui-form{
+     margin-top: 10px;
   }
 }
 
@@ -236,7 +246,6 @@ html body .layui-nav .layui-nav-bar {
        }
    }
 }
-
 /*工作流部分样式*/
 .migu-workflow-container{
    .layui-form{
