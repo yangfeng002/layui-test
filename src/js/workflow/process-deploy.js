@@ -4,20 +4,15 @@
 layui.use(['element','layer','laypage','upload','form'], function () {
     var element = layui.element(), layer = layui.layer,$ = layui.jquery,laypage = layui.laypage,form = layui.form();
     //上传文件操作
-    layui.upload({
-        url: '',
-        elem: '', //指定原始元素，默认直接查找class="layui-upload-file"
-        method: 'get', //上传接口的http类型
-        before: function(input){
-            //返回的参数item，即为当前的input DOM对象
-            console.log('文件上传中');
-        },
-        success: function(res){
-            console.log(res);
-            layer.msg(res.msg);
-        }
+    layui.use('upload', function() {
+        var upload = layui.upload;
+        layui.upload({
+            url: '上传接口url',
+            success: function(res) {
+                console.log(res); //上传成功返回值，必须为json格式
+            }
+        });
     });
-
     //页面初始化加载默认第一页
     var deployData =  renderDeployments(1);
     //列表分页加载

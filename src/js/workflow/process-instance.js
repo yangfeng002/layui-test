@@ -4,7 +4,7 @@
 layui.use(['form','element','layer','laypage'], function () {
     var element = layui.element(), layer = layui.layer,$ = layui.jquery,laypage = layui.laypage;
     //页面初始化加载默认第一页
-    var data =  rendeInstances(1);
+    var data =  rendeInstances(1,8);
     //分页加载
     laypage({
         cont: $(".layui-pagination"),//dom，字符串id,jquery对象都可以

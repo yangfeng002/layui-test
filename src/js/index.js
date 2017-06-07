@@ -19,6 +19,12 @@ layui.use(['element','layer','util','form'],function() {
     });
     // 初始化
     init();
+
+   /* window.onbeforeunload =function(){
+        return"window.onbeforeunload is triggered!";
+    };*/
+
+
     var mainHeight = $(window).height() - 60 - 41 - 44 - 5;
     $("#frame").css({height: $(window).height()-180});//设置iframe高度
     //二级菜单事件
@@ -31,8 +37,7 @@ layui.use(['element','layer','util','form'],function() {
         var iframe = $("#frame").load(url);
         if (!length) {
             //绑定对应的iframe
-            var iframe = $("#frame").load(url);
-           // var iframe = '<iframe src="' + url + '" style="height:' + mainHeight + 'px;width: 100%;" frameborder="0"></iframe>';
+            var iframe = '<iframe src="' + url + '" style="height:' + mainHeight + 'px;width: 100%;" frameborder="0"></iframe>';
             element.tabAdd(tab, {
                 title	: title,
                 content	: iframe,
